@@ -36,7 +36,7 @@ function Todos() {
         {todos.map((data, index) => {
           return (
             <div>
-              {index + 1}. {data.title}
+              {index + 1 + ")"} {data.title}
             </div>
           );
         })}
