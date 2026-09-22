@@ -35,6 +35,8 @@ function Todos() {
     let arr = [...todos];
     arr.splice(ind, 1);
     setTodos(arr);
+
+  // UPNEXT I will be creating functionalities to edit the todo items
   };
   return (
     <main className="todo-page">
