@@ -27,22 +27,22 @@ function Todos() {
         <p className="todo-eyebrow">Daily list</p>
         <h1>Todo Application</h1>
         <div className="todo-form">
-        <input
-          aria-label="New todo"
-          placeholder="Enter your todo"
-          onChange={(e) => setTodoInp(e.target.value)}
-          value={todoInp}
-        />
-        <button onClick={addTodo}>Add</button>
+          <input
+            aria-label="New todo"
+            placeholder="Enter your todo"
+            onChange={(e) => setTodoInp(e.target.value)}
+            value={todoInp}
+          />
+          <button onClick={addTodo}>Add</button>
         </div>
         <div className="todo-list">
-        {todos.map((data, index) => {
-          return (
-            <div className="todo-item" key={data.title}>
-              {index + 1 + ")"} {data.title}
-            </div>
-          );
-        })}
+          {todos.map((data, index) => {
+            return (
+              <div className="todo-item" key={data.title}>
+                {index + 1 + ")"} {data.title}
+              </div>
+            );
+          })}
         </div>
       </section>
     </main>
