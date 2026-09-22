@@ -22,26 +22,30 @@ function Todos() {
     setTodoInp("");
   };
   return (
-    <div>
-      <h1>Todo Application</h1>
-      <div>
+    <main className="todo-page">
+      <section className="todo-panel">
+        <p className="todo-eyebrow">Daily list</p>
+        <h1>Todo Application</h1>
+        <div className="todo-form">
         <input
+          aria-label="New todo"
           placeholder="Enter your todo"
           onChange={(e) => setTodoInp(e.target.value)}
           value={todoInp}
         />
-        <button onClick={addTodo}>{"Add"}</button>
-      </div>
-      <div>
+        <button onClick={addTodo}>Add</button>
+        </div>
+        <div className="todo-list">
         {todos.map((data, index) => {
           return (
-            <div>
+            <div className="todo-item" key={data.title}>
               {index + 1 + ")"} {data.title}
             </div>
           );
         })}
-      </div>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }
 
