@@ -33,19 +33,17 @@ input {
 
 .todo-panel {
 	width: min(100%, 560px);
-	padding: clamp(28px, 6vw, 48px);
+	padding: 34px;
 	border: 1px solid #deddd8;
-	border-radius: 12px;
+	border-radius: 20px;
 	background: #fbfaf8;
-	box-shadow: 0 18px 45px rgb(38 37 34 / 7%);
+	box-shadow: 0 18px 45px rgba(38, 37, 34, 0.025);
 }
 
 .todo-eyebrow {
 	margin: 0 0 10px;
 	color: #77746e;
-	font-size: 0.74rem;
-	font-weight: 700;
-	letter-spacing: 0.08em;
+	font-size: 14px;
 	text-transform: uppercase;
 }
 
@@ -89,8 +87,8 @@ input:focus {
 
 button {
 	border: 1px solid #252525;
-	border-radius: 7px;
-	padding: 0 20px;
+	border-radius: 10px;
+	padding: 0 18px;
 	color: #fff;
 	background: #252525;
 	cursor: pointer;
@@ -109,12 +107,51 @@ button:hover {
 }
 
 .todo-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
 	border-bottom: 1px solid #e5e3de;
-	padding: 15px 2px;
+	padding: 15px 0px;
 	color: #3d3b37;
 	font-size: 0.95rem;
 	font-weight: 600;
 	letter-spacing: -0.02em;
+}
+
+.todo-actions {
+	display: flex;
+	flex-shrink: 0;
+	gap: 6px;
+}
+
+.todo-edit-input {
+	width: 100%;
+	padding: 8px 10px;
+}
+
+.todo-action {
+	display: grid;
+	width: 32px;
+	height: 32px;
+	place-items: center;
+	border: 1px solid #deddd8;
+	border-radius: 6px;
+	padding: 0;
+	color: #5d5a54;
+	background: transparent;
+	font-size: 1rem;
+}
+
+.todo-action:hover {
+	border-color: Green;
+	color: #fff;
+	background: Green;
+}
+
+.todo-action-delete:hover {
+	background: rgb(141, 2, 2);
+    border-color: rgb(141, 2, 2);
 }
 
 @media (max-width: 480px) {
