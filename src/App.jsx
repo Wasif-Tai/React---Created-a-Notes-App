@@ -36,7 +36,7 @@ function Todos() {
     arr.splice(ind, 1);
     setTodos(arr);
 
-  // UPNEXT I will be creating functionalities to edit the todo items
+    // UPNEXT I will be creating functionalities to edit the todo items
   };
   return (
     <main className="todo-page">
@@ -73,7 +73,9 @@ function Todos() {
                   <button
                     onClick={() => markDone(ind)}
                     title={data.isDone ? "Mark as not done" : "Mark as done"}
-                    aria-label={data.isDone ? "Mark as not done" : "Mark as done"}
+                    aria-label={
+                      data.isDone ? "Mark as not done" : "Mark as done"
+                    }
                     className="todo-action"
                   >
                     <FaRegCheckCircle />
